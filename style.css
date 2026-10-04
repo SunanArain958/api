@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f3f6fa;
+    color: #172033;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ================= HEADER ================= */
+
+h1 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #102a43;
+}
+
+/* ================= SEARCH ================= */
+
+#searchInput {
+    display: block;
+    width: 450px;
+    max-width: 100%;
+    padding: 15px 20px;
+    margin: 0 auto 35px;
+
+    border: 1px solid #d9e2ec;
+    border-radius: 12px;
+    outline: none;
+
+    background: white;
+    color: #172033;
+
+    font-size: 16px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+#searchInput::placeholder {
+    color: #9aa5b1;
+}
+
+#searchInput:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* ================= PRODUCTS ================= */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+/* ================= PRODUCT CARD ================= */
+
+.product {
+    background: #ffffff;
+    padding: 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e8edf2;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+
+    transition: all 0.3s ease;
+
+    overflow: hidden;
+}
+
+.product:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= IMAGE ================= */
+
+.product img {
+    width: 100%;
+    height: 210px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+
+    background: #f8fafc;
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.product:hover img {
+    transform: scale(1.04);
+}
+
+/* ================= TITLE ================= */
+
+.product h2 {
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #172033;
+
+    margin-bottom: 12px;
+
+    min-height: 45px;
+
+    line-height: 1.4;
+}
+
+/* ================= PRICE + RATING ================= */
+
+.price_rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 12px;
+}
+
+/* Price */
+
+.price_rating span:first-child {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+/* Rating */
+
+.price_rating span:last-child {
+    background: #fff7ed;
+    color: #ea580c;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ================= PAGINATION ================= */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 45px;
+
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    min-width: 42px;
+    height: 42px;
+
+    padding: 0 13px;
+
+    border: 1px solid #d9e2ec;
+
+    background: #ffffff;
+
+    color: #243b53;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.pagination button:hover {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.pagination button.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ================= LOADING ================= */
+
+#loading {
+    text-align: center;
+    font-size: 18px;
+    color: #52606d;
+    margin: 30px 0;
+}
+
+/* ================= ERROR ================= */
+
+#error {
+    text-align: center;
+    color: #dc2626;
+    background: #fef2f2;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin: 20px auto;
+
+    max-width: 500px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    #searchInput {
+        margin-bottom: 25px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .product img {
+        height: 230px;
+    }
+
+    .pagination {
+        gap: 5px;
+    }
+
+    .pagination button {
+        min-width: 38px;
+        height: 38px;
+        padding: 0 10px;
+    }
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f2fe, #eef2ff, #fdf2f8);
+    color: #172033;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
